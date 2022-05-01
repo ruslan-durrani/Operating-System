@@ -1,6 +1,16 @@
 #Chapter 3#
 ***
 
+**Q 3.1 Using the program shown in Figure 3.30, explain what the output will be at Line A.
+
+  **Answer:**
+     The result is still 5 as the child updates its copy of value. 
+     When control returns to the parent, its value remains at 5.
+**Q 3.2** Including the initial parent process, how many processes are created by the program shown in Figure 3.31?
+ 
+ **Answer:**
+  There are 8 processes created.
+  
 **Q 3.3:** Original versions of Apple’s mobile iOS operating system provided no means of concurrent processing. Discuss three major complications that concurrent processing adds to an operating system.
 
   **Answer:**

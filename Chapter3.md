@@ -1,7 +1,7 @@
 #Chapter 3#
 ***
 
-**Q 3.1 Using the program shown in Figure 3.30, explain what the output will be at Line A.
+**Q 3.1** Using the program shown in Figure 3.30, explain what the output will be at Line A.
 
   **Answer:**
      The result is still 5 as the child updates its copy of value. 

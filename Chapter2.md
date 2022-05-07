@@ -155,11 +155,20 @@ Purpose of system calls are given as follows:
 
     * Message - passing model:
 
-      * `In this, the communicating processes exchange messages with one another to transfer information. Messages can be exchanged between the processes either directly or indirectly through a common mail box. Message passing is useful for exchanging smaller amounts of data, because no conflicts need to be avoided. It is also easier to implement than is shared memory for inter computer communication. But the main advantage is it can handle only small amounts of data.`
+      * `In this, the communicating processes exchange messages with one another to transfer information. 
+         Messages can be exchanged between the processes either directly or indirectly through a common mail box. 
+         Message passing is useful for exchanging smaller amounts of data, because no conflicts need to be avoided. 
+         It is also easier to implement than is shared memory for inter computer communication. 
+         But the main advantage is it can handle only small amounts of data.`
 
     * Shared - Memory mode:
 
-        * `In this, processes use shared memory creates and shared memory attaches system calls to create and gain access to regions of memory owned by other processes. Two or more processes can exchange information by reading and writing data in the shared areas. Shared memory allows maximum speed and convenience of communication, since it can be done at memory speeds when it takes place within a computer. Problem exist, however, in the areas of protection and synchronization between the processes sharing memory.`
+        * `In this, processes use shared memory creates and shared memory attaches system calls to create and gain access 
+            to regions of memory owned by other processes. 
+           Two or more processes can exchange information by reading and writing data in the shared areas. 
+           Shared memory allows maximum speed and convenience of communication, since it can be done at memory 
+            speeds when it takes place within a computer. 
+           Problem exist, however, in the areas of protection and synchronization between the processes sharing memory.`
 
 
   **Q 2.19:** Why is the separation of mechanism and policy desirable?

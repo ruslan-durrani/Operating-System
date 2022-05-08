@@ -1,3 +1,46 @@
+5.1 In Section 5.4, we mentioned that disabling interrupts frequently can affect the system’s clock. 
+Explain why this can occur and how such effects can be minimized
+
+**Answer**
+`The system clock is updated at every clock interrupt. 
+ If interrupts were disabled—particularly for a long period of time—it is possible the system clock could easily lose the correct time. 
+ The system clock is also used for scheduling purposes. 
+      For example, the time quantum for a process is expressed as a number of clock ticks. 
+      At every clock interrupt,the scheduler determines if the time quantum for the currently running process has expired. 
+      If clock interrupts were disabled, the scheduler could not accurately assign time quantums. 
+ 
+ This effect can be minimizedby disabling clock interrupts for only very short periods.`
+
+
+5.3 What is the meaning of the term busy waiting? What other kinds ofwaiting are there in an operating system? Can busy waiting be avoided altogether? Explain your answer
+
+**Answer**
+
+`Busy waiting means that a process is waiting for a condition to be satisfied in a tight loop without relinquishing the processor. 
+ Alternatively, a process could wait by relinquishing the processor, and block on acondition and wait to be awakened at some appropriate time in the
+ future. 
+ Busy waiting can be avoided but incurs the overhead associated with putting a process to sleep and having to wake it up when the appropriate 
+ program state is reached.`
+ 
+ 
+ 
+ 5.4 Explain why spinlocks are not appropriate for single-processor systemsyet are often used in multiprocessor systems.
+ 
+ **Answer**
+ 
+ `Spinlocks are not appropriate for single-processor systems because the condition that would break a process out of the spinlock can be obtainedonly by executing a different process. If the process is not relinquishingthe processor, other processes do not get the opportunity to set the program condition required for the first process to make progress. 
+ In amultiprocessor system, other processes execute on other processors andthereby modify the program state in order to release the first processfrom the spinlock`
+
+
+5.5 Show that, if the wait() and signal() semaphore operations are notexecuted atomically, then mutual exclusion may be violated
+
+**Answer**
+
+`A wait operation atomically decrements the value associated with asemaphore. If two wait operations are executed on a semaphore whenits value is 1, if the two operations are not performed atomically, then it ispossible that both operations might proceed to decrement the semaphorevalue, thereby violating mutual exclusion`
+
+
+
+
 5.21 Servers can be designed to limit the number of open connections. For
 example, a server may wish to have only N socket connections at any
 point in time. As soon as N connections are made, the server will

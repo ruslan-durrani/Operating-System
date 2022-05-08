@@ -6,6 +6,9 @@
   **Answer:**
      The result is still 5 as the child updates its copy of value. 
      When control returns to the parent, its value remains at 5.
+     
+     
+     
 **Q 3.2** Including the initial parent process, how many processes are created by the program shown in Figure 3.31?
  
  **Answer:**
